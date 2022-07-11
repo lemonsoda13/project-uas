@@ -33,9 +33,9 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final dataMap = <String, double>{
-    "Flutter": 2,
-    "React": 3,
-    "Xamarin": 5,
+    "Flutter": 7,
+    "React": 2,
+    "Xamarin": 10,
     "Ionic": 4,
   };
 
