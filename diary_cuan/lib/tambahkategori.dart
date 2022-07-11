@@ -1,6 +1,5 @@
 import 'package:diary_cuan/api/model/kategorimodel.dart';
 import 'package:diary_cuan/api/service/serviceskategori.dart';
-import 'package:diary_cuan/api/service/serviceskategori.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

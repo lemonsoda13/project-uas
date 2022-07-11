@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:diary_cuan/DrawList/theme.dart';
+import 'package:diary_cuan/tambahkategori.dart';
 import 'package:flutter/material.dart';
 
 class KategoriPage extends StatelessWidget {
@@ -471,8 +472,10 @@ class _MyPageKategoriState extends State<MyPageKategori> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: InkWell(
-              onTap: (){
-
+              onTap: (){  
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return TambahKategori();
+                }));
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -485,6 +488,7 @@ class _MyPageKategoriState extends State<MyPageKategori> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
+                        
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(color: primaryColor, width: 1),

@@ -40,7 +40,7 @@ class TransaksiApiService {
 
   Future<TransaksiModel?> getTransaksiBy(int id) async {
     final response = await client.get(
-        Uri.parse("$baseUrl/user/$id")
+        Uri.parse("$baseUrl/transaksi/$id")
     );
     if (response.statusCode == 200) {
       final data = TransaksiModel.fromJson(json.decode(response.body));

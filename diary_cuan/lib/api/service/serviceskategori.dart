@@ -8,7 +8,7 @@ class KategoriApiService {
   Client client = Client();
 
   Future<List<KategoriModel>> getKategori() async {
-    final response = await client.get(Uri.parse("$baseUrl/Kategori"));
+    final response = await client.get(Uri.parse("$baseUrl/kategori"));
     if (response.statusCode == 200) {
       return userFromJson(response.body);
     } else {
@@ -17,7 +17,7 @@ class KategoriApiService {
   }
 
   Future<bool> createKategori(KategoriModel data) async {
-    final response = await client.post(
+    final response= await client.post(
         Uri.parse("$baseUrl/kategori"),
         body: {
 
@@ -35,7 +35,7 @@ class KategoriApiService {
 
   Future<KategoriModel?> getKategoriBy(int id) async {
     final response = await client.get(
-        Uri.parse("$baseUrl/user/$id")
+        Uri.parse("$baseUrl/kategori/$id")
     );
     if (response.statusCode == 200) {
       final data = KategoriModel.fromJson(json.decode(response.body));
@@ -47,7 +47,7 @@ class KategoriApiService {
 
   Future<bool> updateKategori({required int id, required KategoriModel data}) async {
     final response = await client.put(
-        Uri.parse("$baseUrl/Kategori/$id"),
+        Uri.parse("$baseUrl/kategori/$id"),
         body: {
 
           "id_kategori": data.id_kategori,
@@ -64,7 +64,7 @@ class KategoriApiService {
 
   Future<int> deleteKategori({required int id}) async {
     final response = await client.delete(
-        Uri.parse("$baseUrl/Kategori/$id")
+        Uri.parse("$baseUrl/kategori/$id")
     );
     if (response.statusCode == 200) {
       return 1;
