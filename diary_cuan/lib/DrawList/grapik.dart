@@ -66,7 +66,6 @@ class HomePageState extends State<HomePage> {
   bool _showChartValues = true;
   bool _showChartValuesInPercentage = true;
   bool _showChartValuesOutside = true;
-
   LegendShape? _legendShape = LegendShape.circle;
   LegendPosition? _legendPosition = LegendPosition.bottom;
 
@@ -292,6 +291,7 @@ class HomePageState extends State<HomePage> {
     );
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () {}),
         title: const Text("Pie Chart"),
       ),
       body: LayoutBuilder(
