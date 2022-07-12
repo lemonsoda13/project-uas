@@ -160,9 +160,9 @@ class _TambahTransaksiState extends State<TambahTransaksi> {
   void uploadDat() {
     var jenis;
 
-    if(idSelected==1){
+    if (idSelected == 1) {
       jenis = "Pemasukan";
-    }else{
+    } else {
       jenis = "Pengeluaran";
     }
     TransaksiModel model = TransaksiModel(
@@ -173,16 +173,15 @@ class _TambahTransaksiState extends State<TambahTransaksi> {
         nominal: '',
         detail: '',
         jenis_detail: '',
-        tanggal_transaksi: ''
-      );
+        tanggal_transaksi: '');
 
-      model.id_user = '12345';
-      model.id_kategori = '1234';
-      model.jenis_transaksi = jenis;
-      model.nominal = nominal.text;
-      model.detail = detail.text;
-      model.jenis_detail = "null";
-      model.tanggal_transaksi = dateinput.text;
+    model.id_user = '12345';
+    model.id_kategori = '1234';
+    model.jenis_transaksi = jenis;
+    model.nominal = nominal.text;
+    model.detail = detail.text;
+    model.jenis_detail = "null";
+    model.tanggal_transaksi = dateinput.text;
 
     transaksiApiService.createTransaksi(model).then((value) => print("ok"));
   }
