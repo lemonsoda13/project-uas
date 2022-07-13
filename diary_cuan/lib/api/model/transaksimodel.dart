@@ -15,10 +15,10 @@ class TransaksiModel {
     required this.id_user,
     required this.id_kategori,
     required this.jenis_transaksi,
-    required this.nominal,
+    required this.nominal, 
     required this.detail,
     required this.jenis_detail,
-    required this.tanggal_transaksi,
+    required this.tanggal_transaksi, 
   });
 
   factory TransaksiModel.fromJson(Map<String, dynamic> map) {
@@ -53,13 +53,13 @@ class TransaksiModel {
   }
 }
 
-List<TransaksiModel> userFromJson(String jsonData) {
+List<TransaksiModel> transaksiFromJson(String jsonData) {
   final data = json.decode(jsonData);
   return List<TransaksiModel>.from(
       data.map((item) => TransaksiModel.fromJson(item)));
 }
 
-String userToJson(TransaksiModel data) {
+String transaksiToJson(TransaksiModel data) {
   final jsonData = data.toJson();
   return json.encode(jsonData);
 }

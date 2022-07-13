@@ -1,4 +1,6 @@
 import 'package:diary_cuan/homePage.dart';
+import 'package:diary_cuan/login.dart';
+import 'package:diary_cuan/register.dart';
 import 'package:diary_cuan/tambahTransaksi.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
               primary: const Color(0xFF332FD0),
             ),
       ),
-      home: HomePage(),
+      home: Login(),
       localizationsDelegates: [
         GlobalWidgetsLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
