@@ -54,8 +54,8 @@ class NavigationDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Graphic()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Graphic()));
             },
           ),
           ListTile(

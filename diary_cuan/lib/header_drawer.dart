@@ -15,18 +15,16 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
       padding: EdgeInsets.only(bottom: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children:[
+        children: [
           Container(
             margin: EdgeInsets.only(top: 20),
             height: 150,
             width: 100,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('images/diarycuan.png'),
-              fit: BoxFit.cover
-              ),
+              image: DecorationImage(
+                  image: AssetImage('images/diarycuan.png'), fit: BoxFit.cover),
             ),
           ),
-         
         ],
       ),
     );
